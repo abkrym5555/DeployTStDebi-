@@ -6,7 +6,7 @@ pipeline{
         stage("build docker image"){
             steps{
               script {
-                sh "docker run -t docker-react-proj -f Dockerfile.dev ."
+                sh "docker build -t docker-react-proj -f Dockerfile.dev ."
               }
          }
       }

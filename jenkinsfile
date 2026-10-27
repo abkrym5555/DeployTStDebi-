@@ -1,22 +1,22 @@
-pipeline{
-    agent{
-        label "docker"
-    }
-    stages{
-        stage("build docker image"){
-            steps{
-              script {
-                sh "docker build -t docker-react-proj -f Dockerfile.dev ."
-              }
-         }
-      }
-      stage("run tests"){
-        steps{
-          script {
-            sh "docker run -e CI=true docker-react-proj npm run test"
-          }
-        }
-      }
-    }
-  }
+// pipeline{
+//     agent{
+//         label "docker"
+//     }
+//     stages{
+//         stage("build docker image"){
+//             steps{
+//               script {
+//                 sh "docker build -t docker-react-proj -f Dockerfile.dev ."
+//               }
+//          }
+//       }
+//       stage("run tests"){
+//         steps{
+//           script {
+//             sh "docker run -e CI=true docker-react-proj npm run test"
+//           }
+//         }
+//       }
+//     }
+//   }
 

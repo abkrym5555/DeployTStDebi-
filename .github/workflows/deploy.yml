@@ -30,3 +30,4 @@ jobs:
           environment_name: Debi-deploy-react-app2-env
           version_label: ${{ github.sha }}
           region: us-east-1
+          deployment_package: deploy.zip
